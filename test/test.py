@@ -1,0 +1,21 @@
+list1 = ['A']
+list2 = ['B']
+list3 = ['C']
+print("輸入A學生的成績")
+list1.append(int(input("國文:")))
+list1.append(int(input("數學:")))
+list1.append(int(input("英文:")))
+list1.append(round((list1[1] + list1[2] + list1[3])/3,1))
+print("輸入B學生的成績")
+list2.append(int(input("國文:")))
+list2.append(int(input("數學:")))
+list2.append(int(input("英文:")))
+list2.append(round((list2[1] + list2[2] + list2[3])/3,1))
+print("輸入C學生的成績")
+list3.append(int(input("國文:")))
+list3.append(int(input("數學:")))
+list3.append(int(input("英文:")))
+list3.append(round((list3[1] + list3[2] + list3[3])/3,1))
+print(list1)
+print(list2)
+print(list3)

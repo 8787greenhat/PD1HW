@@ -1,0 +1,41 @@
+int serach_times;
+    scanf("%d",&serach_times);
+    int sum[serach_times-1];
+    for (int k=0;k<=serach_times-1;k++){//stroge sum
+        int start,end;
+        scanf("%d%d",&start,&end);
+        sum[serach_times] = prefix_sum[end] - prefix_sum[start-1];
+    }
+    for(int k=0;k<=serach_times-1;k++){
+        printf("%d\n",sum[k]);
+    }
+
+printf("\\\\\\\n");
+    for(int i = 0;i<=row-1;i++){
+        for(int j = 0;j<=colum-1;j++){
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+
+ int N;//set maximum num
+    scanf("%d",&N);
+    int arr[N-2];//storge the input num
+    int check[N];//use 1 & 0 to check which num not exist
+    for(int i = 0;i<=N-2;i++){//storge
+        scanf("%d",&arr[i]);
+    }
+    for(int k = 0;k<=N;k++){//reset check all element to 0
+        check[k] =0;
+    }
+    for(int j = 0;j<=N-2;j++){//check num to 1
+        check[arr[j]] =1;
+    }
+    int i = 1;//beginning start form 1 to aviod pointer run check[0] this element
+    while(i<=N){
+        if(check[i] == 0){
+            printf("%d",i);
+            break;
+        }
+        i++;
+    }
